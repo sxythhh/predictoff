@@ -1,0 +1,8 @@
+{
+  "name": "whop-auth",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@whop/sdk": "^1.0.0"
+  }
+}
