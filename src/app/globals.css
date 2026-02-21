@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* ===== Dark theme (default) ===== */
+:root,
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-page: #0E0E0E;
+  --bg-sidebar: #101010;
+  --bg-card: #141414;
+  --bg-card-inner: #111111;
+  --bg-card-header: #1B1B1B;
+  --bg-input: #202020;
+  --bg-button: #222222;
+  --bg-divider: #232323;
+  --bg-interactive: #2A2A2A;
+  --bg-hover: #1a1a1a;
+  --bg-hover-alt: #333333;
+  --bg-badge: #3E3E3E;
+  --bg-active-end: #343434;
+
+  /* Text */
+  --text-primary: #FAFAFA;
+  --text-primary-white: #FFFFFF;
+  --text-secondary: #D2D2D2;
+  --text-muted: #BDBDBD;
+  --text-label: #A0A0A0;
+  --text-subtle: #909090;
+  --text-dim: #8B8B8B;
+  --text-disabled: #646464;
+  --text-icon: #737373;
+
+  /* Accents */
+  --accent-green: #33C771;
+  --accent-green-hover: #2ab563;
+  --accent-green-border: #59F79B;
+  --accent-blue: #3B82F6;
+  --accent-red: #EF4444;
+  --accent-yellow: #FACC15;
+
+  /* Overlay / shadows */
+  --overlay-white: rgba(255, 255, 255, 0.002);
+  --overlay-hover: rgba(255, 255, 255, 0.02);
+  --overlay-hover-strong: rgba(255, 255, 255, 0.04);
+  --overlay-hover-subtle: rgba(255, 255, 255, 0.05);
+  --shadow-card: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Light theme ===== */
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg-page: #F5F5F5;
+  --bg-sidebar: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-inner: #F8F8F8;
+  --bg-card-header: #F0F0F0;
+  --bg-input: #F0F0F0;
+  --bg-button: #E8E8E8;
+  --bg-divider: #E5E5E5;
+  --bg-interactive: #E0E0E0;
+  --bg-hover: #F0F0F0;
+  --bg-hover-alt: #D5D5D5;
+  --bg-badge: #D0D0D0;
+  --bg-active-end: #E8E8E8;
+
+  /* Text */
+  --text-primary: #1A1A1A;
+  --text-primary-white: #1A1A1A;
+  --text-secondary: #404040;
+  --text-muted: #606060;
+  --text-label: #6B6B6B;
+  --text-subtle: #737373;
+  --text-dim: #808080;
+  --text-disabled: #909090;
+  --text-icon: #909090;
+
+  /* Accents stay the same */
+  --accent-green: #33C771;
+  --accent-green-hover: #2ab563;
+  --accent-green-border: #59F79B;
+  --accent-blue: #3B82F6;
+  --accent-red: #EF4444;
+  --accent-yellow: #FACC15;
+
+  /* Overlay / shadows */
+  --overlay-white: rgba(0, 0, 0, 0.02);
+  --overlay-hover: rgba(0, 0, 0, 0.03);
+  --overlay-hover-strong: rgba(0, 0, 0, 0.05);
+  --overlay-hover-subtle: rgba(0, 0, 0, 0.04);
+  --shadow-card: 0px 4px 6px -1px rgba(0, 0, 0, 0.06);
+}
+
+@theme inline {
+  --color-background: var(--bg-page);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-display), sans-serif;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
